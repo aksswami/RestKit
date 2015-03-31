@@ -429,7 +429,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
 	} else {
         request = [self.HTTPClient requestWithMethod:method path:path parameters:parameters];
     }
-
+    [request setTimeoutInterval:180];
 	return request;
 }
 
